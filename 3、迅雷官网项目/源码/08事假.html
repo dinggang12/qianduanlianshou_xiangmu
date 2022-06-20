@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>你好</button>
+    <script>
+        /* 
+        2、事件
+        事件多配合函数使用
+
+        1）语法
+        ①写在HTML中
+        <元素 on事件 = "js代码"></元素>
+
+        <button onclick="console.log('你好');">点击我</button>
+
+        ②写在HTML和js中
+        html:
+        <元素 on事件 = "函数名();"></元素>
+
+        js:
+        function 函数名(){
+            函数体
+        }
+
+        <button onclick="hello();">点击我</button>
+        function hello(){
+             console.log('你好');
+        }
+
+
+        ③写在js中
+        元素.on事件 = function(){
+            函数体
+        };
+
+        //获取元素
+         var btn = document.querySelector('button');
+         btn.onclick = function(){
+            console.log('你好');
+        };
+    
+        
+        */
+    </script>
+</body>
+</html>

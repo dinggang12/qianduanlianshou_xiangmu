@@ -1,0 +1,63 @@
+/* 商家样式开始 */
+.container{
+    padding: 10px;
+}
+.items{
+    width: 100%;
+    height: 110px;
+    margin-bottom: 15px;
+}
+.items-top{
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+}
+.items-bottom{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #eee;
+    text-align: left;
+    color: #a6a6a6;
+}
+.items-top>img{
+    width: 70px;
+    height: 70px;
+    margin: 5px 15px 5px 5px;
+}
+.items-message{
+    text-align: left;
+}
+.items-name{
+    height: 30px;
+    line-height: 30px;
+}
+.items-price{
+    height: 25px;
+    list-style: 25px;
+    font-size: 14px;
+}
+.items-star{
+    color: red;
+}
+.items-star>i{
+    /* 字符之间的距离  取正值  变大  赋值 变小 */
+    letter-spacing:-5px;
+}
+.items-star>.grey{
+    color: #eee;
+}
+.order{
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    background-color: #017E5C;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+/* 商家样式结束 */

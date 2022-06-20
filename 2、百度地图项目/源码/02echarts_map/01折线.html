@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts.min.js"></script>
+    <!-- <script src='js/echarts.min.js'></script> -->
+    <style>
+        #main {
+            width: 600px;
+            height: 400px;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 绘制一个简单的图表 -->
+    <div id="main"></div>
+
+    <script>
+        //1.获取容器 初始化
+        var myChart = echarts.init(document.getElementById('main'));
+        //2.配置项
+        var option = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                // type: 'value'
+            },
+            //工具栏
+            toolbox:{
+                feature:{
+                    saveAsImage:{//保存图片
+                        show:true
+                    },
+                    restore:{//配置项还原
+                        show:true,
+                    },
+                    dataView:{
+                        show:true,
+                    },
+                    
+                }
+            },
+            series: [{
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: 'line'
+            }]
+        };
+
+        //3.显示图表
+        myChart.setOption(option);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!-- 
+  事件传递参数：
+      1.给组件节点 添加属性： data-属性='属性值' ...
+      2.获取参数在事件里面获取事件对象 event  当前元素属性currentTarget
+
+      注意：
+      在 WXML 中，这些自定义数据以 data- 开头，多个单词由连字符 - 连接。
+      这种写法中，连字符写法会转换成驼峰写法，而大写字符会自动转成小写字符
+
+ -->
+ <view bindtap='demo' data-id='123' data-val='你好'>新闻1</view>
+ <view bindtap='demo' data-id='456'>新闻2</view>
+ <view bindtap='demo' data-id='789'>新闻3</view>
+
+<!-- 连字符写法会转换成驼峰写法，而大写字符会自动转成小写字符 -->
+<view bindtap='demo' data-user-name='aaa'>data属性驼峰命名</view>
+<view bindtap='demo' data-userName='aaa'>data属性小写字母</view>
+
+<view>=============================</view>
+
+
+
+
+<navigator url='../news/news'>新闻页面</navigator>
+
+<!-- 引入模板 -->
+<import src='../../templates/productList/productList.wxml' />
+
+<!-- 使用模板 
+    语法：<template is='模板名字'></template>
+    说明：
+        1.template双标签 里面不能写内容 不显示
+        2.单标签 <template is='productList' />
+        3.template组件不会渲染 类似block包裹容器
+
+-->
+
+<template is='productList'></template>
+
+<!-- 
+    模板传递数据
+    <template is='productList'  data='传递给模板的变量名'></template>
+ -->
+
+<block wx:for='{{listArr}}' wx:key='index' wx:for-item='obj'>
+    <template is='productList' data='{{obj}}'></template>
+ </block> 
+
+
+ <!-- 展开对象 ...item  展开运算符 
+      item={ id:'',title:'',}  获取：item.id  item.title
+      ...item=id:'',title:''   获取：id  title  
+ -->
+
+ <block wx:for='{{listArr}}' wx:key='index'>
+    <template is='productList' data='{{...item}}'></template>
+ </block>
+

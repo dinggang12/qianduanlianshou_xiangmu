@@ -1,0 +1,37 @@
+<!-- <template name='productList'>
+  <view class='list'>
+    <view class='img'>图片</view>
+    <view class='text'>内容标题</view>
+  </view>
+</template>  -->
+
+
+<!-- 定义模板   item  -->
+ <template name='productList'>
+  <view class='list'>
+    <view class='img'>图片{{obj.id}}</view>
+    <view class='text'>{{obj.title}}</view>
+  </view>
+</template> 
+
+
+
+<!-- ...item -->
+<template name='productList'>
+  <view class='list'>
+    <view class='img'>图片{{id}}</view>
+    <view class='text'>{{title}}</view>
+  </view>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+

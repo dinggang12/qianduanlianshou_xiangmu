@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .box{
+            width: 1226px;
+            height: 460px;
+            margin:  0 auto;
+            position: relative;
+        }
+        .box>img{
+            width: 100%;
+            height: 100%;
+        }
+        .left,.right{
+            width: 41px;
+            height: 69px;
+            background-color: skyblue;
+            position: absolute;
+            top: 50%;
+            margin-top: -34.5px;
+            /* 光标转换为小手 */
+            cursor: pointer;
+        }
+        .left{
+            left: 0;
+        }
+        .right{
+            right: 0;
+        }
+        .circle{
+            position: absolute;
+            right: 30px;
+            bottom: 20px;
+        }
+        .circle>li{
+            width: 6px;
+            height: 6px;
+            background-color: rgba(0,0,0,.4);
+            border: 2px solid rgba(0,0,0,.3);
+            border-radius: 50%;
+            float: left;
+            margin: 0 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="images/img1.webp" alt="" id='img'>
+        <div class="left"></div>
+        <div class="right"></div>
+        <ul class="circle">
+            <li onclick="fun(0);"></li>
+            <li onclick="fun(1);"></li>
+            <li onclick="fun(2);"></li>
+            <li onclick="fun(3);"></li>
+            <li onclick="fun(4);"></li>
+        </ul>
+    </div>
+    <script>
+        // 存储图片
+        var imgArr = ['img1.webp','img2.webp','img3.jpg','img4.webp','img5.webp'];
+        //                0           1            2           3         4
+       
+        //声明变量 表示数组的下标
+        var i = 0;//全局变量
+       
+        //获取元素
+        var left = document.querySelector('.left');
+        var right = document.querySelector('.right');
+        var img = document.getElementById('img');
+        var list = document.querySelectorAll('.circle>li');
+        console.log(list);
+        
+
+        //绑定点击事件
+        right.onclick = function(){
+            //图片下一张  数组下标+1
+            i++;//相当于 i = i + 1
+
+            //当下标大于4  也就是当第五张显示完  显示第一张
+            if(i > 4){
+                i = 0;//数组下标赋值为0
+            }
+
+            //设置图片路径   图片.src = '路径'
+            img.src = 'images/' + imgArr[i];
+        };
+        
+
+        left.onclick = function(){
+            // 图片上一张  数组下标-1
+            i--;
+
+            // 当第一张显示完 再点击  显示第五张
+            if(i < 0){
+                i = 4
+            }
+
+            //设置图片路径   图片.src = '路径'
+            img.src = 'images/' + imgArr[i];
+
+        };
+
+        // 定义函数  切换图片
+        function fun(index){
+            //当index  和 数组下标相等时  对应的图片显示
+
+            // 拿到数组的所有下标
+            for(var i = 0; i < imgArr.length; i++){
+                //i  0 1 2 3 4
+
+                // 判断i  和  index    当和index相等时   对应的图片显示
+                if(i === index){
+                    img.src = 'images/' + imgArr[i];
+                    list[i].style.backgroundColor = 'rgba(255,255,255,.3)'
+                }else{
+                    list[i].style.backgroundColor = '';
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

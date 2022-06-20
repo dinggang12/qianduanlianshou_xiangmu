@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  存储文本
+        var textArr = ['首页','手机','笔记本','周边','家电','服务','睡觉','旅游'];
+        //               0      1      2       3      4      5     6      7
+
+        //  创建ul
+        var ul = document.createElement('ul');
+
+        // ul作为body的子节点追加到页面中
+        document.body.appendChild(ul);
+
+        // 生成6个li和a   i  表示数组的下标
+        for(var i = 0; i < textArr.length; i++){
+            // 创建li
+            var list = document.createElement('li');
+
+            // li作为ul的子节点追加到ul中
+            ul.appendChild(list)
+
+            // 创建a
+            var a = document.createElement('a');
+
+            // a作为li的子节点追加到li中
+            list.appendChild(a);
+
+            // 创建文本节点 首页
+            var text = document.createTextNode(textArr[i])
+
+            // 首页作为子节点追加到a中
+            a.appendChild(text);
+
+
+            // li设置style属性
+            list.setAttribute('style','list-style-type: none;float: left;padding: 20px 40px;background-color: skyblue;');
+
+            //a设置style属性
+            a.setAttribute('style','text-decoration: none;color: #fff;');
+
+            //a设置href属性
+            a.setAttribute('href','#')
+
+        }
+
+     </script>
+</body>
+</html>

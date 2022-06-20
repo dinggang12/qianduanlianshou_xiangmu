@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>米课</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/mike.css">
+</head>
+<body>
+    <!-- 导航条开始 -->
+    <div class="nav">
+        <div class="wrap">
+            <div class="logo"></div>
+            <div class="search">
+                <form action="">
+                    <input type="text" placeholder="查找课程..." class="search-input">
+                    <button class="iconfont">&#xe64d;</button>
+                </form>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">公告</a></li>
+                    <li><a href="#">登录</a></li>
+                </ul>
+            </div>
+            <div class="btn"><i class="iconfont">&#xe66c;</i></div>
+        </div>
+    </div>
+    <!-- 导航条结束 -->
+    <!-- 登录界面开始 -->
+    <div class="login">
+        <div class="wrap">
+            <div class="login-logo">
+                <img src="images/MiLogo.png" alt="">
+                <br>
+                <img src="images/miTitle.png" alt="">
+            </div>
+            <div class="form">
+                <form action="">
+                    <ul>
+                        <li><a href="#" class="active-a">登录米课</a></li>
+                        <li><a href="#">注册·加入米课</a></li>
+                    </ul>
+                    <input type="email" placeholder="邮箱" class="search-input">
+                    <input type="password" placeholder="密码" class="search-input">
+                    <div class="rem">
+                        <input type="checkbox" checked>
+                        记住我
+                        <a href="#">忘记密码</a>
+                    </div>
+                    <button>登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 登录界面结束 -->
+    <!-- 主体开始 -->
+    <div class="container">
+        <div class="wrap">
+            <!-- 新课速递开始 -->
+            <div class="new">
+                <div class="box">
+                    <h3 class="title">新课速递</h3>
+                    <div class="new-box">
+                        <div>
+                            <a href="#">
+                                <img src="images/biology.jpg" alt="">
+                                <p>感受文学与电影交融之魅力</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/biology.jpg" alt="">
+                                <p>感受文学与电影交融之魅力</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="new-box" style="display: none;">
+                        <div>
+                            <a href="#">
+                                <img src="images/film.jpg" alt="">
+                                <p>感受文学与电影交融之魅力</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/film.jpg" alt="">
+                                <p>感受文学与电影交融之魅力</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="new-box" style="display: none;">
+                        <div>
+                            <a href="#">
+                                <img src="images/mineral.jpg" alt="">
+                                <p>感受文学与电影交融之魅力</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/mineral.jpg" alt="">
+                                <p>感受文学与电影交融之魅力</p>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="circle">
+                        <li class="active-circle" onclick="fun(0);"></li>
+                        <li onclick="fun(1);"></li>
+                        <li onclick="fun(2);"></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 新课速递结束 -->
+        </div>
+    </div>
+    <!-- 主体结束 -->
+    <script src="js/mike.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+
+        .one {
+            width: 500px;
+            height: 400px;
+            border: 1px solid #999;
+            padding: 20px;
+            background: #fff;
+            float: left;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        #main {
+            width: 500px;
+            height: 360px;
+        }
+        #main2{
+            width: 500px;
+            height: 360px;
+        }
+        #main3{
+            width: 500px;
+            height: 360px;
+        }
+        #main4{
+            width: 500px;
+            height: 360px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class='one'>
+        <div class='title'>新增客户数排名</div>
+        <div id='main'></div>
+    </div>
+
+    <div class='one'>
+        <div class='title'>跟进客户数排名</div>
+        <div id='main2'></div>
+    </div>
+
+    <div class='one'>
+        <div class='title'>销售额分析</div>
+        <div id='main3'></div>
+    </div>
+
+    <div class='one'>
+        <div class='title'>销售量分析</div>
+        <div id='main4'></div>
+    </div>
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='js/echarts.min.js'></script>
+    <script>
+        //基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        var myChart2 = echarts.init(document.getElementById('main2'));
+        var myChart3 = echarts.init(document.getElementById('main3'));
+        var myChart4 = echarts.init(document.getElementById('main4'));
+        //动态获取数据
+        $.ajax({
+            type: 'get',
+            url: 'data/format.json',
+            dataType:'json',
+            success: function (res) {
+                // console.log(res);
+                console.log(res.result.data);
+                //图表1数据：新增客户数
+                var new_ranking = res.result.data.new_ranking;
+                console.log(new_ranking);
+                //处理数据--函数---图表
+                setData(new_ranking,myChart);
+                
+                //图表2：-----
+                var follow_ranking=res.result.data.follow_ranking;
+                console.log(follow_ranking);           
+                setData(follow_ranking,myChart2);
+
+                //图表3：-----
+                var sale_money=res.result.data.sale_money;
+                //注意：获取的数据 y轴的值 不是num ---- total_amount 
+                //单独写一下 
+
+                //图表：
+               var sales_num=res.result.data.sales_num;
+               setData(sales_num,myChart4)
+            }
+        })
+        
+
+        //函数---处理图表数据
+        function setData(arr,myChart) {//arr=[{},{},....] 
+            //遍历arr数组---获取x轴 y轴的数组变量
+            var xArr = [], yArr = [];
+            for (var i = 0; i < arr.length; i++) {
+                xArr.push(arr[i].employee_name);//employee_name
+                yArr.push(arr[i].num);
+            }
+            // console.log(xArr,yArr);
+
+            //设置数据---
+            var option = {
+                tooltip: {},
+                grid: {
+                    left: 0,
+                    top: 20,
+                    right: 0,
+                    bottom: 50,
+                    containLabel: true
+                },
+                xAxis: {
+                    axisTick: {
+                        alignWithLabel: true,
+                    },
+                    data:xArr
+                },
+                yAxis: {},
+                dataZoom:[//显示某一些区域 
+                    {
+                        type:'slider',
+                        //start 数据窗口范围的起始百分比。范围是：0 ~ 100。表示 0% ~ 100%。
+                        start:0,
+                        end:50
+                    }
+                ],
+                series: [{
+                    name: '销量',
+                    type: 'bar',
+                    //颜色
+                    itemStyle: {
+                        color: '#3080FF'
+                    },
+                    data: yArr
+                }]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

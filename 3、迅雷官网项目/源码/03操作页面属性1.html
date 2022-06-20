@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="box" title="哈哈哈哈">
+        盒子
+    </div>
+    <script>
+        /* 
+        1、操作HTML的属性
+        1）操作所有属性
+        ①元素.getAttribute('属性名')
+        如果有属性  返回对应的属性值
+        如果没有属性  返回null
+
+        ②元素.setAttribute('属性名','属性值')
+
+        ③元素.removeAttribute('属性名')
+
+
+
+        */
+    </script>
+    <script>
+        //获取页面元素
+        var box = document.getElementById('box');
+        // var box = document.getElementsByClassName('box');
+        // var box = document.getElementsByTagName('div');
+        // var box = document.querySelector('#box')
+        // var box = document.querySelectorAll('#box')
+
+
+        //判断是否有title属性
+        // console.log( box.getAttribute('title'));//哈哈哈哈
+        // console.log( box.getAttribute('style'));//null
+
+        // 设置属性
+        // box.setAttribute('style','border-radius:50%;line-height:200px;');
+        // box.setAttribute('align','center')
+
+        // 删除属性
+        // box.removeAttribute('class');
+
+
+    </script>
+</body>
+</html>

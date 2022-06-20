@@ -1,0 +1,10 @@
+<!-- 使用模板 -->
+<import src='../../templates/productList/productList.wxml'/>
+
+<view>新闻页面</view>
+
+
+<!-- 布局list -->
+<view class='content'>
+  <template is='productList'></template>
+</view>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts.min.js"></script>
+    <!-- <script src='js/echarts.min.js'></script> -->
+    <style>
+        #main {
+            width: 600px;
+            height: 400px;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 绘制一个简单的图表 -->
+    <div id="main"></div>
+
+    <script>
+        //1.获取容器 初始化
+        var myChart = echarts.init(document.getElementById('main'));
+        //2.配置项
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b}: {c} ({d}%)'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 10,
+                data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+            },
+            series: [
+                {
+                    name: '访问来源',
+                    type: 'pie',
+                    //半径 饼图的半径。可以为如下类型   数组的第一项是内半径，第二项是外半径
+                    radius:'70%',//string 是圆饼的半径
+                    // radius: ['50%', '70%'],//圆环  20% 
+                    // avoidLabelOverlap: false,//默认label 不重叠
+                    //饼图的中心（圆心）坐标，数组的第一项是横坐标，第二项是纵坐标
+                    center :['50%', '60%'],
+                    label: {//四周的标签文字label
+                        show: false,//默认是true 
+                        position: 'center'//位置默认四周
+                    },
+                    labelLine: {//从饼图到label标签的文字
+                        show: false//默认显示
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    //注意：饼图和地图 数据格式：[{name:'',value:''},{},{}]
+                    data: [
+                        { value: 335, name: '直接访问' },
+                        { value: 310, name: '邮件营销' },
+                        { value: 234, name: '联盟广告' },
+                        { value: 135, name: '视频广告' },
+                        { value: 1548, name: '搜索引擎' }
+                    ]
+                }
+            ]
+        };
+
+        //3.显示图表
+        myChart.setOption(option);
+
+    </script>
+
+</body>
+
+</html>

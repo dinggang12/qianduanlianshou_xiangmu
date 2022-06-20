@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 1300px;
+            height: 600px;
+            border: 1px solid #999;
+        }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=oek2hHpa3PhlyQe2WYDz5xtiIexpaeqi"></script>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        //1.创建地图实例
+        var map = new BMap.Map("container"); 
+        //2.设置中心点坐标  BMap命名空间下的Point类来创建一个坐标点
+        var point = new BMap.Point(116.406, 39.915); 
+        //3.地图初始化，同时设置地图展示级别  (3-19)
+        map.centerAndZoom(point, 15);  
+        //4.鼠标滚轮  开启鼠标滚轮缩放
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+        //地图添加标注：
+        //点	Marker	表示地图上的点，可自定义标注的图标 
+        var marker = new BMap.Marker(point);        // 创建标注    
+        map.addOverlay(marker);                     // 将标注添加到地图中 
+
+        //InfoWindow：信息窗口。也是一种特殊的覆盖物，它可以展示更为丰富的文字和多媒体信息。注意：同一时刻只能有一个信息窗口在地图上打开。
+        var opts = {    
+            width : 250,     // 信息窗口宽度    
+            height: 100,     // 信息窗口高度    
+            title : "信息窗口标题"  // 信息窗口标题   
+        }  
+        //窗口创建
+        var content='<ul><li>哈哈哈</li><li>哈哈哈</li><li>哈哈哈</li></ul>'
+        var infoWindow=new BMap.InfoWindow(content,opts);
+        // map.openInfoWindow(infoWindow,map.getCenter());//地图中心位置：map.getCenter() 
+        map.openInfoWindow(infoWindow,point)
+
+
+        //点击marker标注---打开信息窗口
+        marker.addEventListener('click',function(){
+            map.openInfoWindow(infoWindow,point); 
+        })
+
+
+
+
+    </script>
+    
+</body>
+</html>

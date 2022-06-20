@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国疫情</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='js/echarts.min.js'></script>
+    <script src='js/china.js'></script>
+</head>
+
+<body>
+
+    <div id='main' style="width: 800px;height: 500px;border:1px solid #999"></div>
+
+
+    <script>
+        //获取
+        var myChart = echarts.init(document.getElementById('main'));
+        //获取动态数据
+        $.ajax({
+            type: 'get',
+            url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5',
+            dataType: 'jsonp',
+            success: function (res) {
+                // console.log(res.data);
+                var obj = JSON.parse(res.data);
+                // console.log(obj.areaTree[0].children);
+                var arr = obj.areaTree[0].children;
+                console.log(arr);//获取解析数据--目的：[{name:'城市名字',value:'城市数据'},{},....]
+                var newArr = [];
+                for (var i = 0; i < arr.length; i++) {
+                    //arr数组里面的每一项 获取name属性 和  nowConfirm属性数量
+                    //name=arr[i].name   value=arr[i].total.nowConfirm
+                    var json = {
+                        name: arr[i].name,
+                        value: arr[i].total.nowConfirm
+                    }
+                    //追加
+                    newArr.push(json);
+                }
+                console.log(newArr);
+                //渲染数据
+                setEcharts(newArr)
+
+
+            }
+        })
+
+
+        //
+        function setEcharts(data) {
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '中国疫情'
+                },
+                tooltip: {
+                    show: true,
+                    formatter: '{a}-{b}-{c}'
+                },
+                //映射---颜色
+                visualMap: [
+                    {
+                        type: 'piecewise',
+                        //自定义『分段式视觉映射组件（visualMapPiecewise）』的每一段的范围，以及每一段的文字，以及每一段的特别的样式。
+                        pieces: [
+                             { min: 1000, max: 1000000, label: '大于等于1000人', color: '#372a28' },
+                            { min: 500, max: 999, label: '确诊500-999人', color: '#4e160f' },
+                            { min: 100, max: 499, label: '确诊100-499人', color: '#974236' },
+                            { min: 10, max: 99, label: '确诊10-99人', color: '#ee7263' },
+                            { min: 1, max: 9, label: '确诊1-9人', color: '#f5bba7' },                       
+                        ]
+                    }
+                ],
+                geo: {//地图组件
+                    show: true,
+                    map: 'china',//地图
+                    label: {
+                        show: true,
+                    },
+                    emphasis: {//鼠标悬浮的高亮
+                        label: {
+                            show: true,
+                        },
+                        itemStyle: {
+                            color: 'pink'
+                        }
+                    }
+                },
+                series: [{
+                    name: '地图',
+                    type: 'map',
+                    geoIndex: 0,
+                    data: data
+                }]
+            };
+
+            //显示图表
+            myChart.setOption(option);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<view class='list {{active?"touch-move":""}}' bindtap='demo' bindtouchstart="touchStart" bindtouchmove="touchMove">
+
+    <view class="item">
+
+      <view class="circle">
+        <icon wx:if='{{isSeleted}}' type='success' color="#43bf92"></icon>
+        <icon wx:else type='circle' color="#999"></icon>
+      </view>
+
+      <view class='img'>
+        <image src='../../images/item-1.jpg'></image>
+      </view>
+
+      <view class='content'>
+        <view class="title">标题</view>
+        <view class="desc">文字描述</view>
+        <view class="bottom">
+            <text class="money">￥35.00</text>
+            <view class="edit">
+              <text class="reduce">-</text>
+              <text class='num'>1</text>
+              <text class="add">+</text>
+            </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="delete">删除</view>
+
+</view>
+
+
+
+<!-- 占位 -->
+<view class='gao'></view>
+
+<!-- 全选布局 -->
+<view class='myCart-bottom'>
+
+  <view class="selectedAll">
+        <icon wx:if='{{isSeleted}}' type='success' color="#43bf92"></icon>
+        <icon wx:else type='circle' color="#999"></icon>
+        <text>全选</text>
+  </view>
+
+  <view class='heji'>合计:00.00</view>
+  <view class='jiesuan'>结算:00.00</view>
+
+</view>

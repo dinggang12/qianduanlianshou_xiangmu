@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="box"></div>
+    </div>
+    <script>
+        /* 
+        常用事件：
+        onclick   点击
+        onmousedown   鼠标按下
+        onmouseup   鼠标释放
+        onmousemove  鼠标移动  移动1px触发一次事件
+        onmouseenter  鼠标移入  不支持冒泡  父元素绑定了事件，子元素不可以触发
+        onmouseleave  鼠标移出  不支持冒泡  父元素绑定了事件，子元素不可以触发
+        onmouseover   鼠标移入  支持冒泡   父元素绑定了事件，子元素可以触发
+        onmouseout    鼠标移出  支持冒泡   父元素绑定了事件，子元素可以触发
+          
+       
+        */
+        //获取元素
+        var box = document.getElementById('box');
+        
+        //点击div  控制台输出点击
+        box.onclick = function(){
+            console.log('点击');
+
+            // 背景颜色设置为绿色
+            // box.setAttribute('style','background-color:green');
+            // box.style.backgroundColor = 'green';
+            // box.style.cssText = 'background-color:green';
+        };
+
+        // 鼠标按下
+        box.onmousedown = function(){
+            console.log('按下');
+        };
+        // 鼠标释放
+        box.onmouseup = function(){
+            console.log('释放');
+        };
+
+        // 鼠标移动  移动1px触发一次事件
+        // box.onmousemove = function(){
+        //     console.log('动');
+        // };
+
+
+        // 鼠标移入  不支持冒泡  父元素绑定了事件，子元素不可以触发
+        // box.onmouseenter = function(){
+        //     console.log('移入');
+        // };
+
+        // 鼠标移出  不支持冒泡  父元素绑定了事件，子元素不可以触发
+        // box.onmouseleave = function(){
+        //     console.log('移出');
+        // }
+
+        // 鼠标移入  支持冒泡   父元素绑定了事件，子元素可以触发
+        box.onmouseover = function(){
+            console.log('移入');
+        };
+
+        // 鼠标移出  支持冒泡   父元素绑定了事件，子元素可以触发
+        box.onmouseout = function(){
+            console.log('移出');
+        };
+    </script>
+</body>
+</html>

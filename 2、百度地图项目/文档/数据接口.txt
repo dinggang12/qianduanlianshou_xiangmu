@@ -1,0 +1,19 @@
+热门城市：http://bang.360.cn/aj/getcitycode	
+说明：1.使用代理请求
+ 2.返回的是一个json数据， 城市名称在 name属性上  城市的code/id 在code属性上
+地区：http://bang.360.cn/aj/get_area/?citycode=bei_jing
+说明：1.请求方式 jsonp
+	2.citycode 对应选中的热门城市
+	3.返回值是json，结果在result属性中，区域的名称是result对象中的属性值，区域的id是对象中的键名
+                 
+店铺：http://bang.360.cn/at/shop?&quan_id=&service_id=&type_id=&online=off&cuxiao=off&is_bzj=0&tag=&pagesize=5&lng=&lat=&city_id=bei_jing&area_id=6&pn=1
+			说明：1.请求方式是代理请求
+				 2.city_id 是选中的热门城市id
+				   area_id 是选中的区域，可以为空
+				   pn 是页码值
+				 3.返回值：
+				 	shop_name: 店铺名称
+				 	addr: 店铺地址
+				 	main: 主营
+				 	map_longitude:经度
+				 	map_latitude:维度

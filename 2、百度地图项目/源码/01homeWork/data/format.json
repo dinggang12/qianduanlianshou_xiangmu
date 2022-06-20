@@ -1,0 +1,413 @@
+{
+  "status": true,
+  "type": "json",
+  "code": "API_COMM_001",
+  "code_msg": "操作成功",
+  "code_user_msg": "操作成功",
+  "result": {
+    "data": {
+      "sale_money": [
+        {
+          "real_amount": "57869.46",
+          "total_amount": "57869.46",
+          "num": "83",
+          "employee_id": "4130b64eaf2c49c188171f7522b3fd4a",
+          "merchant_department_id": "",
+          "employee_name": "巢校长",
+          "phone": "17710000005",
+          "department": "",
+          "campus": "",
+          "branchSchool": ""
+        },
+        {
+          "real_amount": "13841.00",
+          "total_amount": "14816.00",
+          "num": "4",
+          "employee_id": "693775dab25741888767b403ca760442",
+          "merchant_department_id": "0bd5e3d4947243af80601fd1592ea426",
+          "employee_name": "王久旺",
+          "phone": "18631936260",
+          "department": "",
+          "campus": "海淀校区",
+          "branchSchool": "北京分校"
+        },
+        {
+          "real_amount": "12173.10",
+          "total_amount": "12173.10",
+          "num": "13",
+          "employee_id": "b73a17e4c9d740de9fe9f77b00cf1c62",
+          "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
+          "employee_name": "王沐枫",
+          "phone": "17310168697",
+          "department": "",
+          "campus": "朝阳校区",
+          "branchSchool": "北京分校"
+        },
+        {
+          "real_amount": "1500.00",
+          "total_amount": "1500.00",
+          "num": "2",
+          "employee_id": "188b4d6337c84902aa5a5d87a35fe90e",
+          "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
+          "employee_name": "昊",
+          "phone": "13683277563",
+          "department": "",
+          "campus": "朝阳校区",
+          "branchSchool": "北京分校"
+        },
+        {
+          "real_amount": "0.70",
+          "total_amount": "0.70",
+          "num": "2",
+          "employee_id": "76c80c4d88054d6ea258111af125f9d6",
+          "merchant_department_id": "7fa9240e0de84cba80ebca80da329635",
+          "employee_name": "闪闪老师",
+          "phone": "15201230219",
+          "department": "销售1号",
+          "campus": "",
+          "branchSchool": ""
+        },
+        {
+          "real_amount": "0.42",
+          "total_amount": "0.42",
+          "num": "4",
+          "employee_id": "df41fe9107f44cd0894771ab7023061f",
+          "merchant_department_id": "fa3d69a73a8748f9b9c2976a166be124",
+          "employee_name": "小苏苏",
+          "phone": "18010035652",
+          "department": "",
+          "campus": "",
+          "branchSchool": "北京分校"
+        }
+      ],
+      "sales_num": [
+        {
+          "real_amount": "57869.46",
+          "total_amount": "57869.46",
+          "num": "83",
+          "employee_id": "4130b64eaf2c49c188171f7522b3fd4a",
+          "merchant_department_id": "",
+          "employee_name": "巢校长",
+          "phone": "17710000005",
+          "department": "",
+          "campus": "",
+          "branchSchool": ""
+        },
+        {
+          "real_amount": "12173.10",
+          "total_amount": "12173.10",
+          "num": "13",
+          "employee_id": "b73a17e4c9d740de9fe9f77b00cf1c62",
+          "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
+          "employee_name": "王沐枫",
+          "phone": "17310168697",
+          "department": "",
+          "campus": "朝阳校区",
+          "branchSchool": "北京分校"
+        },
+        {
+          "real_amount": "0.42",
+          "total_amount": "0.42",
+          "num": "4",
+          "employee_id": "df41fe9107f44cd0894771ab7023061f",
+          "merchant_department_id": "fa3d69a73a8748f9b9c2976a166be124",
+          "employee_name": "小苏苏",
+          "phone": "18010035652",
+          "department": "",
+          "campus": "",
+          "branchSchool": "北京分校"
+        },
+        {
+          "real_amount": "13841.00",
+          "total_amount": "14816.00",
+          "num": "4",
+          "employee_id": "693775dab25741888767b403ca760442",
+          "merchant_department_id": "0bd5e3d4947243af80601fd1592ea426",
+          "employee_name": "王久旺",
+          "phone": "18631936260",
+          "department": "",
+          "campus": "海淀校区",
+          "branchSchool": "北京分校"
+        },
+        {
+          "real_amount": "0.70",
+          "total_amount": "0.70",
+          "num": "2",
+          "employee_id": "76c80c4d88054d6ea258111af125f9d6",
+          "merchant_department_id": "7fa9240e0de84cba80ebca80da329635",
+          "employee_name": "闪闪老师",
+          "phone": "15201230219",
+          "department": "销售1号",
+          "campus": "",
+          "branchSchool": ""
+        },
+        {
+          "real_amount": "1500.00",
+          "total_amount": "1500.00",
+          "num": "2",
+          "employee_id": "188b4d6337c84902aa5a5d87a35fe90e",
+          "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
+          "employee_name": "昊",
+          "phone": "13683277563",
+          "department": "",
+          "campus": "朝阳校区",
+          "branchSchool": "北京分校"
+        }
+      ],
+      "real_money": 85384.68,
+      "debt_money": "975.00",
+      "fixture_num": "33",
+      "new_num": "136",
+      "new_ranking": [
+        {
+          "creator_id": "4130b64eaf2c49c188171f7522b3fd4a",
+          "num": "97",
+          "p1": "97",
+          "valid": "1.0000",
+          "merchant_department_id": "",
+          "department": "",
+          "campus": "",
+          "branchSchool": "",
+          "employee_name": "巢校长",
+          "employee_phone": "17710000005",
+          "sort": 1,
+          "p1_ratio": "100.00%"
+        },
+        {
+          "creator_id": "76c80c4d88054d6ea258111af125f9d6",
+          "num": "24",
+          "p1": "24",
+          "valid": "1.0000",
+          "merchant_department_id": "7fa9240e0de84cba80ebca80da329635",
+          "department": "销售1号",
+          "campus": "",
+          "branchSchool": "",
+          "employee_name": "闪闪老师",
+          "employee_phone": "15201230219",
+          "sort": 2,
+          "p1_ratio": "100.00%"
+        },
+        {
+          "creator_id": "0fac4a8281814b82a0ef7c56f3cb1468",
+          "num": "4",
+          "p1": "4",
+          "valid": "1.0000",
+          "merchant_department_id": "1d1d172703ff4a9eacf75fa8b9e5d164",
+          "department": "销售部",
+          "campus": "",
+          "branchSchool": "",
+          "employee_name": "顽皮豹",
+          "employee_phone": "15241996618",
+          "sort": 3,
+          "p1_ratio": "100.00%"
+        },
+        {
+          "creator_id": "693775dab25741888767b403ca760442",
+          "num": "4",
+          "p1": "4",
+          "valid": "1.0000",
+          "merchant_department_id": "0bd5e3d4947243af80601fd1592ea426",
+          "department": "",
+          "campus": "海淀校区",
+          "branchSchool": "北京分校",
+          "employee_name": "王久旺",
+          "employee_phone": "18631936260",
+          "sort": 4,
+          "p1_ratio": "100.00%"
+        },
+        {
+          "creator_id": "b73a17e4c9d740de9fe9f77b00cf1c62",
+          "num": "3",
+          "p1": "3",
+          "valid": "1.0000",
+          "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
+          "department": "",
+          "campus": "朝阳校区",
+          "branchSchool": "北京分校",
+          "employee_name": "王沐枫",
+          "employee_phone": "17310168697",
+          "sort": 5,
+          "p1_ratio": "100.00%"
+        },
+        {
+          "creator_id": "0b39dc91db774c3d839eeff6c3d9034b",
+          "num": "1",
+          "p1": "1",
+          "valid": "1.0000",
+          "merchant_department_id": "fa3d69a73a8748f9b9c2976a166be124",
+          "department": "",
+          "campus": "",
+          "branchSchool": "北京分校",
+          "employee_name": "乐乐",
+          "employee_phone": "17710361164",
+          "sort": 6,
+          "p1_ratio": "100.00%"
+        },
+        {
+          "creator_id": "41851ae41e1c462bbe597edcf1b83d67",
+          "num": "1",
+          "p1": "1",
+          "valid": "1.0000",
+          "merchant_department_id": "fde582fae30c4427aa7ef296933d492b",
+          "department": "",
+          "campus": "",
+          "branchSchool": "上海分校",
+          "employee_name": "国老师",
+          "employee_phone": "17710000008",
+          "sort": 7,
+          "p1_ratio": "100.00%"
+        },
+        {
+          "creator_id": "ebe07d18e5ab4bd1acda7ad6a73c60b5",
+          "num": "1",
+          "p1": "1",
+          "valid": "1.0000",
+          "merchant_department_id": "fa3d69a73a8748f9b9c2976a166be124",
+          "department": "",
+          "campus": "",
+          "branchSchool": "北京分校",
+          "employee_name": "周老师",
+          "employee_phone": "17710000007",
+          "sort": 8,
+          "p1_ratio": "100.00%"
+        },
+        {
+          "creator_id": "188b4d6337c84902aa5a5d87a35fe90e",
+          "num": "1",
+          "p1": "1",
+          "valid": "1.0000",
+          "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
+          "department": "",
+          "campus": "朝阳校区",
+          "branchSchool": "北京分校",
+          "employee_name": "昊",
+          "employee_phone": "13683277563",
+          "sort": 9,
+          "p1_ratio": "100.00%"
+        }
+      ],
+      "reality_tostore_num": "9",
+      "reality_tohear_num": "9",
+      "follow_ranking": [
+        {
+          "employee_id": "4130b64eaf2c49c188171f7522b3fd4a",
+          "num": "49",
+          "merchant_department_id": "",
+          "department": "",
+          "campus": "",
+          "branchSchool": "",
+          "employee_name": "巢校长",
+          "employee_phone": "17710000005",
+          "sort": 1
+        },
+        {
+          "employee_id": "76c80c4d88054d6ea258111af125f9d6",
+          "num": "6",
+          "merchant_department_id": "7fa9240e0de84cba80ebca80da329635",
+          "department": "销售1号",
+          "campus": "",
+          "branchSchool": "",
+          "employee_name": "闪闪老师",
+          "employee_phone": "15201230219",
+          "sort": 2
+        },
+        {
+          "employee_id": "0b39dc91db774c3d839eeff6c3d9034b",
+          "num": "3",
+          "merchant_department_id": "fa3d69a73a8748f9b9c2976a166be124",
+          "department": "",
+          "campus": "",
+          "branchSchool": "北京分校",
+          "employee_name": "乐乐",
+          "employee_phone": "17710361164",
+          "sort": 3
+        },
+        {
+          "employee_id": "df41fe9107f44cd0894771ab7023061f",
+          "num": "3",
+          "merchant_department_id": "fa3d69a73a8748f9b9c2976a166be124",
+          "department": "",
+          "campus": "",
+          "branchSchool": "北京分校",
+          "employee_name": "小苏苏",
+          "employee_phone": "18010035652",
+          "sort": 4
+        },
+        {
+          "employee_id": "0fac4a8281814b82a0ef7c56f3cb1468",
+          "num": "2",
+          "merchant_department_id": "1d1d172703ff4a9eacf75fa8b9e5d164",
+          "department": "销售部",
+          "campus": "",
+          "branchSchool": "",
+          "employee_name": "顽皮豹",
+          "employee_phone": "15241996618",
+          "sort": 5
+        },
+        {
+          "employee_id": "693775dab25741888767b403ca760442",
+          "num": "2",
+          "merchant_department_id": "0bd5e3d4947243af80601fd1592ea426",
+          "department": "",
+          "campus": "海淀校区",
+          "branchSchool": "北京分校",
+          "employee_name": "王久旺",
+          "employee_phone": "18631936260",
+          "sort": 6
+        },
+        {
+          "employee_id": "b73a17e4c9d740de9fe9f77b00cf1c62",
+          "num": "1",
+          "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
+          "department": "",
+          "campus": "朝阳校区",
+          "branchSchool": "北京分校",
+          "employee_name": "王沐枫",
+          "employee_phone": "17310168697",
+          "sort": 7
+        },
+        {
+          "employee_id": "2c6510e677ad4d038959a9e21a6b97fa",
+          "num": "1",
+          "merchant_department_id": "fde582fae30c4427aa7ef296933d492b",
+          "department": "",
+          "campus": "",
+          "branchSchool": "上海分校",
+          "employee_name": "超级管理员",
+          "employee_phone": "13671203789",
+          "sort": 8
+        }
+      ],
+      "sale_funnel": [
+        {
+          "value": "61",
+          "name": "联系"
+        },
+        {
+          "value": "21",
+          "name": "预约到店"
+        },
+        {
+          "value": "9",
+          "name": "实际到店"
+        },
+        {
+          "value": "19",
+          "name": "预约试听"
+        },
+        {
+          "value": "9",
+          "name": "实际试听"
+        },
+        {
+          "value": "33",
+          "name": "成交"
+        }
+      ],
+      "promise_tostore_num": "21",
+      "promise_tohear_num": "19",
+      "contact_people_num": "61",
+      "contact_num": "125"
+    }
+  }
+}

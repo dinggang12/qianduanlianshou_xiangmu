@@ -1,0 +1,85 @@
+<!-- 1.轮播图区域 -->
+<!-- <view class='banner'>
+  <swiper autoplay='true' interval='3000' circular='true' bindchange='swiperChange'>
+    <swiper-item>
+      <image src='../../images/banner.jpg'></image>
+      <view class="banner-info">内容</view>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/banner.jpg'></image>
+       <view class="banner-info">内容</view>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/banner.jpg'></image>
+       <view class="banner-info">内容</view>
+    </swiper-item>
+  </swiper>
+
+  <view class='banner-num'>
+    {{current}}/3
+  </view>
+
+</view> -->
+
+<view class='banner'>
+  <swiper autoplay='true' interval='3000' circular='true' bindchange='swiperChange'>
+    
+    <swiper-item wx:for='{{bannerArr}}' wx:key='index'>
+      <image src='{{item.image}}'></image>
+      <view class="banner-info">{{item.title}}</view>
+    </swiper-item>
+
+  </swiper>
+
+  <view class='banner-num'>
+    {{current}}/{{bannerArr.length}}
+  </view>
+
+</view>
+
+<!-- 2.每日一测 -->
+
+<view class='oneday'>
+  <view class='item'>
+    <image src='../../images/info_left.jpg'></image>
+    <view>每日一测</view>
+  </view>
+   <view class='item'>
+    <image src='../../images/info_right.jpg'></image>
+    <view>每日食谱</view>
+  </view>
+</view>
+
+
+<!-- 3.内容信息  列表展示  -->
+<view class='wrapper'>
+  
+  <!-- <view class='list'>
+    <view class='title'>标题</view>
+    <view class='list-info'>
+        <image src='../../images/info_left.jpg'></image>
+        <view class='info'>
+          <view class='desc'>文字表述动画动画好的好的</view>
+          <view class="readnum"><text>338383</text>次阅读</view>
+      </view>
+    </view>
+    
+  </view> -->
+
+  <!-- 动态 -->
+  <view class='list' wx:for='{{list}}' wx:key='index'>
+    <view class='title'>{{item.title}}</view>
+    <view class='list-info'>
+        <image src='{{item.image}}'></image>
+        <view class='info'>
+          <view class='desc'>{{item.desc}}</view>
+          <view class="readnum"><text>{{item.readNum}}</text>次阅读</view>
+      </view>
+    </view>
+    
+  </view>
+
+
+
+
+</view>
